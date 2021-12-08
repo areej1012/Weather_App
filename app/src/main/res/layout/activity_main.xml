@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:id="@+id/Scroll"
+    android:layoutDirection="ltr">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:paddingStart="10dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="40dp"
+        tools:context=".MainActivity">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="405dp"
+            android:layout_height="406dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHightLow">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="151dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="112dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_sunrise"
+                        android:text="@string/sunrise" />
+
+                    <TextView
+                        android:id="@+id/tvSunrise"
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3"
+                    app:tint="#FFF"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        app:tint="#FFF"
+                        android:drawableTop="@drawable/ic_sunset"
+                        android:text="@string/sunset" />
+
+                    <TextView
+                        android:id="@+id/tvSunset"
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="151dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="112dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/pressure"
+                        android:text="@string/pressure" />
+
+                    <TextView
+                        android:id="@+id/tvPressure"
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_wind"
+                        android:text="@string/wind" />
+
+                    <TextView
+                        android:id="@+id/tvWind"
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="386dp"
+                android:layout_height="139dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="112dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_humidity"
+                        android:text="@string/humidity"
+                         />
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3"
+                    android:background="@drawable/linearlayout_style"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_baseline_update_24"
+                        android:onClick="updateDate"
+                        android:text="@string/update" />
+
+                    <TextView
+                        style="@style/linerarlyout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="updateDate"
+                        android:text="@string/data" />
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tvWeather"
+            android:layout_width="85dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableTop="@drawable/sun"
+            android:text="weather"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvTemp"
+            app:layout_constraintHorizontal_bias="0.734"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="makkah"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="32"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.639"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+        <TextView
+            android:id="@+id/tvHightLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="22/33"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemp" />
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Update:"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHightLow"
+            app:layout_constraintVertical_bias="0.845" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
