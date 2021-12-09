@@ -82,17 +82,18 @@ class MainActivity : AppCompatActivity() {
                     weatherObject = response.body()!!
                     setUpUI()
                 }catch (e :Exception){
-
+                    Toast.makeText(applicationContext,"Please make sure the ZIP code is right",Toast.LENGTH_LONG).show()
                 }
             }
 
             override fun onFailure(call: Call<Weather>, t: Throwable) {
-                Log.e("Main","$t")
+                Toast.makeText(applicationContext,"Check your internet connection or update the data",Toast.LENGTH_LONG).show()
             }
 
         })
 
     }
+  
 
     fun setUpUI(){
         Log.e("NAME", weatherObject?.sys?.country.toString())
